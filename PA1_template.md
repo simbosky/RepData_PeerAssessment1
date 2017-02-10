@@ -96,7 +96,7 @@ Now plot the histogram of total steps over the measurement period changing the b
 
 
 ```r
-qplot(x=total_steps,data=total_steps_per_day, bins=100)
+qplot(x=total_steps,data=total_steps_per_day, binwidth=1000)
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
@@ -156,7 +156,7 @@ Make a new histogram of the total steps for the complete data.
 
 ```r
 completedataplot <- completedata %>% group_by(date) %>% summarize(total_steps=sum(steps))
-qplot(x=total_steps,data=completedataplot, bins=100)
+qplot(x=total_steps,data=completedataplot, binwidth=1000)
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
